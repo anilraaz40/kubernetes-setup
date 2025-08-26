@@ -55,3 +55,16 @@ sudo apt-get update
      kubectl version --client
 
    </pre>
+### Cluster Create
+<pre>
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker
+</pre>
+apply yaml
+<pre>
+  kind create cluster --name demo-cluster --config kind-cluster.yaml
+</pre>
