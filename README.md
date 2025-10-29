@@ -27,21 +27,20 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 ### Install Kubectl
-
-1. Download the latest release with the command:
 ```
+# 1. Download the latest release with the command:
+
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-```
-2. Validate the binary (optional)
-```
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
-```
 
-3. Install kubectl
-```
+# 2. Validate the binary (optional)
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+
+# 3. Install kubectl
+
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-```
-```
+
 kubectl version --client
 ```
 ### Cluster Create
